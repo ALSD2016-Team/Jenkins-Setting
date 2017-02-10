@@ -1,0 +1,33 @@
+commit d6a3be792ae3e3772e2590a51b3251b9ff240371
+tree 769d3b013d955e91f0355e6159baa787ca159ec1
+parent e4d71aaa9064d32ec6ae2e1eb47478e481f80e9d
+author ChihChunLiu <zxcv79138246@gmail.com> 2017-01-05 02:33:03 +0800
+committer ChihChunLiu <zxcv79138246@gmail.com> 2017-01-05 02:33:03 +0800
+
+    更新 開新課程 寄email link
+
+
+
+:100755 100755 c709462a436ec85a7fcd56e19e47e0a55c15b1cd dfec751584a7630a2c048929c0cd163da1fb82ed M	home/app/templates/directives/navigator.html
+commit e4d71aaa9064d32ec6ae2e1eb47478e481f80e9d
+tree 4a6bf87f0dc466a06901e6e4d361849b4d1bd5f0
+parent 83b32a6d2aab1182a3c47ab57d36f0fad68b6ab4
+author tenling <d2356893@gmail.com> 2017-01-05 02:05:09 +0800
+committer GitHub <noreply@github.com> 2017-01-05 02:05:09 +0800
+
+    Remove Demo String
+
+
+
+:100755 100755 ba3aadc8ae887cbca42f7d3ce69ce64234baf36e 5ccf8ba5fa32092a0ce034f979f1af414554a7c4 M	home/app/index.html
+commit 83b32a6d2aab1182a3c47ab57d36f0fad68b6ab4
+tree 28cbdab3ba8528296aee57c55876f8bd3f266875
+parent c5e667a0845bd85ada281e1254a5dfeb45e2f1da
+author tenling <d2356893@gmail.com> 2017-01-05 01:32:47 +0800
+committer GitHub <noreply@github.com> 2017-01-05 01:32:47 +0800
+
+    Test Demo String
+
+
+
+:100755 100755 5ccf8ba5fa32092a0ce034f979f1af414554a7c4 ba3aadc8ae887cbca42f7d3ce69ce64234baf36e M	home/app/index.html

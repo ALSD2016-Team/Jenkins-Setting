@@ -1,0 +1,27 @@
+由計時器啟動
+建置中 工作區 C:\Program Files (x86)\Jenkins\workspace\InvoicePublish_Test
+ > C:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git # timeout=10
+Fetching upstream changes from https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision d6a3be792ae3e3772e2590a51b3251b9ff240371 (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f d6a3be792ae3e3772e2590a51b3251b9ff240371
+ > C:\Program Files\Git\bin\git.exe rev-list c5e667a0845bd85ada281e1254a5dfeb45e2f1da # timeout=10
+[InvoicePublish_Test] $ cmd /c call C:\WINDOWS\TEMP\hudson1419226544760192926.bat
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish_Test>cd ./invoice 
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish_Test\invoice>FOR /F "tokens=*" %i IN ('docker ps -q --filter "ancestor=alsddocker_invoice_test"') DO docker rm -f %i 
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish_Test\invoice>docker rm -f ba76e59b31dc 
+ba76e59b31dc
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish_Test\invoice>docker rmi alsddocker_invoice_test 
+Untagged: alsddocker_invoice_test:latest
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish_Test\invoice>docker build -t alsddocker_invoice_test . 

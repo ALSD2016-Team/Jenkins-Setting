@@ -1,0 +1,91 @@
+由計時器啟動
+建置中 工作區 C:\Program Files (x86)\Jenkins\workspace\HomePublish
+ > C:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git # timeout=10
+Fetching upstream changes from https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision fee8de134c48d076d91e691da10b979726ce0b2c (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f fee8de134c48d076d91e691da10b979726ce0b2c
+ > C:\Program Files\Git\bin\git.exe rev-list fee8de134c48d076d91e691da10b979726ce0b2c # timeout=10
+[HomePublish] $ cmd /c call C:\WINDOWS\TEMP\hudson6845697039143447933.bat
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish>cd ./home 
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>FOR /F "tokens=*" %i IN ('docker ps -q --filter "ancestor=disc9562/homepublish"') DO docker rm -f %i 
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>docker rm -f 118745b4853d 
+118745b4853d
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>docker rmi disc9562/homepublish 
+Untagged: disc9562/homepublish:latest
+Untagged: disc9562/homepublish@sha256:83f4ed2c59947789c06de18d7bebed7dfe4a7b884fcabc7c09c7385308040454
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>docker build -t disc9562/homepublish . 
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.45 MB
+Step 1 : FROM google/nodejs
+ ---> d1921e7f8e86
+Step 2 : COPY . /app
+ ---> Using cache
+ ---> b031845decdc
+Step 3 : WORKDIR /app
+ ---> Using cache
+ ---> 8e7a4997a92d
+Step 4 : RUN npm install -g http-server
+ ---> Using cache
+ ---> f12a1c609a53
+Successfully built f12a1c609a53
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>docker login -e disc9562@gmail.com -u disc9562 -p jay828486 https://index.docker.io/v1/  
+Flag --email has been deprecated, will be removed in 1.13.
+Login Succeeded
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>docker run -d -p 9092:8787 disc9562/homepublish 
+f1957dba81ec9a5bb80044657cab2f486cdff839451b4c044cc21aad3da6c661
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>docker push disc9562/homepublish 
+The push refers to a repository [docker.io/disc9562/homepublish]
+362f6ec0ccde: Preparing
+2ba346f0fad9: Preparing
+5f70bf18a086: Preparing
+5f70bf18a086: Preparing
+5f70bf18a086: Preparing
+6a9c18ca4410: Preparing
+6f67793b17ce: Preparing
+5f70bf18a086: Preparing
+9d61d545c3a8: Preparing
+c283590e53fc: Preparing
+0ed0e074a6fb: Preparing
+5f70bf18a086: Preparing
+5f70bf18a086: Preparing
+5f70bf18a086: Preparing
+46ecc6c4543a: Preparing
+5f70bf18a086: Preparing
+5f70bf18a086: Preparing
+362f6ec0ccde: Waiting
+2ba346f0fad9: Waiting
+5f70bf18a086: Waiting
+6a9c18ca4410: Waiting
+6f67793b17ce: Waiting
+9d61d545c3a8: Waiting
+c283590e53fc: Waiting
+0ed0e074a6fb: Waiting
+46ecc6c4543a: Waiting
+5f70bf18a086: Layer already exists
+2ba346f0fad9: Layer already exists
+6a9c18ca4410: Layer already exists
+362f6ec0ccde: Layer already exists
+6f67793b17ce: Layer already exists
+9d61d545c3a8: Layer already exists
+0ed0e074a6fb: Layer already exists
+46ecc6c4543a: Layer already exists
+c283590e53fc: Layer already exists
+latest: digest: sha256:83f4ed2c59947789c06de18d7bebed7dfe4a7b884fcabc7c09c7385308040454 size: 3858
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>exit 0 
+Finished: SUCCESS

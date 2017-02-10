@@ -1,0 +1,40 @@
+¥Ñ¨Ï¥ÎªÌ [8mha:AAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyOEgY+/dLi1CL9xJziFCMDQzMAuYhVxcMAAAA=[0malsd2016 ±Ò°Ê
+«Ø¸m¤¤ ¤u§@°Ï C:\Program Files (x86)\Jenkins\workspace\HomePublish
+Cloning the remote Git repository
+Cloning repository https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git
+ > C:\Program Files\Git\bin\git.exe init C:\Program Files (x86)\Jenkins\workspace\HomePublish # timeout=10
+Fetching upstream changes from https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git # timeout=10
+ > C:\Program Files\Git\bin\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git # timeout=10
+Fetching upstream changes from https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 7b62257f2435ab896960fe7cdd72e191fd1a6154 (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 7b62257f2435ab896960fe7cdd72e191fd1a6154
+First time build. Skipping changelog.
+[HomePublish] $ cmd /c call C:\WINDOWS\TEMP\hudson3165559440679229954.bat
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish>cd ./home 
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>FOR /F "tokens=*" %i IN ('docker ps -q --filter "ancestor=alsddocker_home"') DO docker rm -f %i 
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>docker rmi alsddocker_home 
+Error response from daemon: No such image: alsddocker_home:latest
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>docker build -t alsddocker_home . 
+unable to prepare context: unable to evaluate symlinks in Dockerfile path: GetFileAttributesEx C:\Program Files (x86)\Jenkins\workspace\HomePublish\home\Dockerfile: The system cannot find the file specified.
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>docker run -d -p 9092:8787 alsddocker_home  
+Unable to find image 'alsddocker_home:latest' locally
+Pulling repository docker.io/library/alsddocker_home
+docker: Error: image library/alsddocker_home:latest not found.
+See 'docker run --help'.
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish\home>exit 125 
+Build step '°õ¦æ Windows §å¦¸«ü¥O' marked build as failure
+Finished: FAILURE

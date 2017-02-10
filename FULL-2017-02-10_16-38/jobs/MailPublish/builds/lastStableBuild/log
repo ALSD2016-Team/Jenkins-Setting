@@ -1,0 +1,89 @@
+由計時器啟動
+建置中 工作區 C:\Program Files (x86)\Jenkins\workspace\MailPublish
+ > C:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/ALSD2016-Team/2016NTUTALSD.git # timeout=10
+Fetching upstream changes from https://github.com/ALSD2016-Team/2016NTUTALSD.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/ALSD2016-Team/2016NTUTALSD.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 876056c3006c80e41d9311c97e686925ecff8e64 (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 876056c3006c80e41d9311c97e686925ecff8e64
+ > C:\Program Files\Git\bin\git.exe rev-list 876056c3006c80e41d9311c97e686925ecff8e64 # timeout=10
+[MailPublish] $ cmd /c call C:\WINDOWS\TEMP\hudson4866907194986329056.bat
+
+C:\Program Files (x86)\Jenkins\workspace\MailPublish>cd ./sendMail 
+
+C:\Program Files (x86)\Jenkins\workspace\MailPublish\sendMail>FOR /F "tokens=*" %i IN ('docker ps -q --filter "ancestor=disc9562/mailpublish"') DO docker rm -f %i 
+
+C:\Program Files (x86)\Jenkins\workspace\MailPublish\sendMail>docker rm -f 6d14bdf76d05 
+6d14bdf76d05
+
+C:\Program Files (x86)\Jenkins\workspace\MailPublish\sendMail>docker rmi disc9562/mailpublish 
+Error response from daemon: conflict: unable to remove repository reference "disc9562/mailpublish" (must force) - container e0c2c9b676b1 is using its referenced image 6604b7e4f69b
+
+C:\Program Files (x86)\Jenkins\workspace\MailPublish\sendMail>docker build -t disc9562/mailpublish . 
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon 62.95 MBSending build context to Docker daemon  63.5 MBSending build context to Docker daemon 64.06 MBSending build context to Docker daemon 64.62 MBSending build context to Docker daemon 65.18 MBSending build context to Docker daemon 65.73 MBSending build context to Docker daemon 66.29 MBSending build context to Docker daemon 66.85 MBSending build context to Docker daemon  67.4 MBSending build context to Docker daemon 67.96 MBSending build context to Docker daemon 68.52 MBSending build context to Docker daemon 69.07 MBSending build context to Docker daemon 69.63 MBSending build context to Docker daemon 70.19 MBSending build context to Docker daemon 70.75 MBSending build context to Docker daemon  71.3 MBSending build context to Docker daemon 71.86 MBSending build context to Docker daemon 72.42 MBSending build context to Docker daemon 72.97 MBSending build context to Docker daemon 73.53 MBSending build context to Docker daemon 74.09 MBSending build context to Docker daemon 74.65 MBSending build context to Docker daemon  75.2 MBSending build context to Docker daemon 75.76 MBSending build context to Docker daemon 76.32 MBSending build context to Docker daemon 76.87 MBSending build context to Docker daemon 77.43 MBSending build context to Docker daemon 77.99 MBSending build context to Docker daemon 78.54 MBSending build context to Docker daemon  79.1 MBSending build context to Docker daemon 79.66 MBSending build context to Docker daemon 80.22 MBSending build context to Docker daemon 80.77 MBSending build context to Docker daemon 81.33 MBSending build context to Docker daemon 81.89 MBSending build context to Docker daemon 82.44 MBSending build context to Docker daemon    83 MBSending build context to Docker daemon 83.56 MBSending build context to Docker daemon 84.12 MBSending build context to Docker daemon 84.67 MBSending build context to Docker daemon 85.23 MBSending build context to Docker daemon 85.79 MBSending build context to Docker daemon 86.34 MBSending build context to Docker daemon  86.9 MBSending build context to Docker daemon 87.46 MBSending build context to Docker daemon 88.01 MBSending build context to Docker daemon 88.57 MBSending build context to Docker daemon 89.13 MBSending build context to Docker daemon 89.69 MBSending build context to Docker daemon 90.24 MBSending build context to Docker daemon  90.8 MBSending build context to Docker daemon 91.36 MBSending build context to Docker daemon 91.91 MBSending build context to Docker daemon 92.47 MBSending build context to Docker daemon 93.03 MBSending build context to Docker daemon 93.59 MBSending build context to Docker daemon 94.14 MBSending build context to Docker daemon  94.7 MBSending build context to Docker daemon 95.26 MBSending build context to Docker daemon 95.81 MBSending build context to Docker daemon 96.37 MBSending build context to Docker daemon 96.93 MBSending build context to Docker daemon 97.48 MBSending build context to Docker daemon 98.04 MBSending build context to Docker daemon  98.6 MBSending build context to Docker daemon 99.16 MBSending build context to Docker daemon 99.71 MBSending build context to Docker daemon 100.3 MBSending build context to Docker daemon 100.8 MBSending build context to Docker daemon 101.4 MBSending build context to Docker daemon 101.9 MBSending build context to Docker daemon 102.5 MBSending build context to Docker daemon 103.1 MBSending build context to Docker daemon 103.6 MBSending build context to Docker daemon 104.2 MBSending build context to Docker daemon 104.7 MBSending build context to Docker daemon 105.3 MBSending build context to Docker daemon 105.8 MBSending build context to Docker daemon 106.4 MBSending build context to Docker daemon   107 MBSending build context to Docker daemon 107.5 MBSending build context to Docker daemon 107.5 MB
+Step 1 : FROM tomcat:8.5.9-jre8
+ ---> d327b448d5b8
+Step 2 : COPY /build/war/sendMail.war /usr/local/tomcat/webapps/
+ ---> Using cache
+ ---> f03e9ddd5565
+Step 3 : WORKDIR /usr/local/tomcat/webapps/
+ ---> Using cache
+ ---> 6604b7e4f69b
+Successfully built 6604b7e4f69b
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+
+C:\Program Files (x86)\Jenkins\workspace\MailPublish\sendMail>docker login -e disc9562@gmail.com -u disc9562 -p jay828486 https://index.docker.io/v1/  
+Flag --email has been deprecated, will be removed in 1.13.
+Login Succeeded
+
+C:\Program Files (x86)\Jenkins\workspace\MailPublish\sendMail>docker run -d -p 9093:8080 disc9562/mailpublish 
+2900cc88782bd37ad7957d98dab3167033420935ba1b88108fc512f52e205125
+
+C:\Program Files (x86)\Jenkins\workspace\MailPublish\sendMail>docker push disc9562/mailpublish 
+The push refers to a repository [docker.io/disc9562/mailpublish]
+c0d2b6f06160: Preparing
+1ab81ccddcb0: Preparing
+100362960951: Preparing
+cdf4f170cc79: Preparing
+731c2c63afc5: Preparing
+1dbba483d13c: Preparing
+24b3cd18a168: Preparing
+ef5e2850ccfe: Preparing
+fbfa3c9a96db: Preparing
+c01141679a41: Preparing
+8a8d2d3a56ef: Preparing
+9e9ecb074181: Preparing
+60a0858edcd5: Preparing
+b6ca02dfe5e6: Preparing
+1dbba483d13c: Waiting
+24b3cd18a168: Waiting
+ef5e2850ccfe: Waiting
+fbfa3c9a96db: Waiting
+c01141679a41: Waiting
+8a8d2d3a56ef: Waiting
+9e9ecb074181: Waiting
+60a0858edcd5: Waiting
+b6ca02dfe5e6: Waiting
+100362960951: Layer already exists
+1ab81ccddcb0: Layer already exists
+731c2c63afc5: Layer already exists
+cdf4f170cc79: Layer already exists
+c0d2b6f06160: Layer already exists
+ef5e2850ccfe: Layer already exists
+24b3cd18a168: Layer already exists
+c01141679a41: Layer already exists
+1dbba483d13c: Layer already exists
+fbfa3c9a96db: Layer already exists
+8a8d2d3a56ef: Layer already exists
+9e9ecb074181: Layer already exists
+60a0858edcd5: Layer already exists
+b6ca02dfe5e6: Layer already exists
+latest: digest: sha256:b18b58d8f5c19783460caf5b8546de988896f90133fdcf50850ca5d6f8bc9424 size: 3253
+
+C:\Program Files (x86)\Jenkins\workspace\MailPublish\sendMail>exit 0 
+Finished: SUCCESS

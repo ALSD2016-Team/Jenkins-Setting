@@ -1,0 +1,112 @@
+¥Ñ¨Ï¥ÎªÌ [8mha:AAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyOEgY+/dLi1CL9xJziFCMDQzMAuYhVxcMAAAA=[0malsd2016 ±Ò°Ê
+«Ø¸m¤¤ ¤u§@°Ï C:\Program Files (x86)\Jenkins\workspace\ALSD2016_Test
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://github.com/ALSD2016-Team/alsd2016_test.git
+ > C:\Program Files\Git\bin\git.exe init C:\Program Files (x86)\Jenkins\workspace\ALSD2016_Test # timeout=10
+Fetching upstream changes from https://github.com/ALSD2016-Team/alsd2016_test.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/ALSD2016-Team/alsd2016_test.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/ALSD2016-Team/alsd2016_test.git # timeout=10
+ > C:\Program Files\Git\bin\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/ALSD2016-Team/alsd2016_test.git # timeout=10
+Cleaning workspace
+ > C:\Program Files\Git\bin\git.exe rev-parse --verify HEAD # timeout=10
+No valid HEAD. Skipping the resetting
+ > C:\Program Files\Git\bin\git.exe clean -fdx # timeout=10
+Fetching upstream changes from https://github.com/ALSD2016-Team/alsd2016_test.git
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/ALSD2016-Team/alsd2016_test.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 04d7c6df129e6d0b069e2a134a3c8e8baf80ce20 (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f 04d7c6df129e6d0b069e2a134a3c8e8baf80ce20
+ > C:\Program Files\Git\bin\git.exe rev-list fecad38aacd9e9108116304a3169a59c623b8381 # timeout=10
+[ALSD2016_Test] $ cmd.exe /C '""C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Ant_AntInstallation\default\bin\ant.bat"' ALSD2016-Test && exit %%ERRORLEVEL%%"
+Buildfile: C:\Program Files (x86)\Jenkins\workspace\ALSD2016_Test\build.xml
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mALSD2016-Test:
+    [mkdir] Created dir: C:\Program Files (x86)\Jenkins\workspace\ALSD2016_Test\junit
+    [junit] Running ALSD.CucumberTest.CucumberRunner
+    [junit] Tests run: 30, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 60.12 sec
+    [junit] Output:
+    [junit] Feature: Test sendMail application
+    [junit] 
+    [junit]   Scenario: When_ClickGenerateBtn_Expect_CorrectMailContent # resources/sendMail.feature:3
+    [junit]     Given Enter sendMail application and select course      # send_Mail_Step.StartSendMailApp(String,String>)
+    [junit]     When I click generate button                            # send_Mail_Step.ClickGenerateBtn()
+    [junit]     Then I can preview the email content                    # send_Mail_Step.PreviewEmailContent(String,String>)
+    [junit] Index: 0
+    [junit] 
+    [junit]   Scenario: When_ClickSendBtn_Expect_SuccessfulAlert                  # resources/sendMail.feature:13
+    [junit]     Given Enter sendMail application and check mail content was right # send_Mail_Step.StartSendMailAppandCheck(String,String>)
+    [junit]     When I click send button and check to send                        # send_Mail_Step.ClickSendBtn()
+    [junit]     Then I will get successful message on alert                       # send_Mail_Step.CheckSuccessfulMsg(String,String>)
+    [junit] Index: 0
+    [junit] 
+    [junit]   Scenario: When_ClickSendBtn_Expect_GetEmail                         # resources/sendMail.feature:22
+    [junit]     Given Enter sendMail application and check mail content was right # send_Mail_Step.StartSendMailAppandCheck(String,String>)
+    [junit]     When I click send button and check to send                        # send_Mail_Step.ClickSendBtn()
+    [junit]     Then I can get a mail from teddysoft                              # send_Mail_Step.CheckEmailfromTeddysoft(String,String>)
+    [junit] 
+    [junit]   Scenario: When_NotSelectCourse_Expect_SuccessfulAlert            # resources/sendMail.feature:32
+    [junit]     Given Enter sendMail application and do not select course name # send_Mail_Step.StartSendMailAppandNotSelectCourse()
+    [junit]     When I click generate button and send button                   # send_Mail_Step.ClickGenerateBtnandSendBtn()
+    [junit]     Then It will be disabled                                       # send_Mail_Step.CheckDisabled(String,String>)
+    [junit] 
+    [junit]   Scenario: When_NotSelectStudent_Expect_NeedChooseStudentAlert                 # resources/sendMail.feature:39
+    [junit]     Given Enter sendMail application and select course name and uncheck student # send_Mail_Step.StartSendMailAppandNotSelectStudent(String,String>)
+    [junit]     When I click send mail button                                               # send_Mail_Step.ClickSendButton()
+    [junit]     Then It will tell me should choose student                                  # send_Mail_Step.CheckChooseStudentAlert(String,String>)
+    [junit] 
+    [junit] 5 Scenarios (5 passed)
+    [junit] 15 Steps (15 passed)
+    [junit] 0m59.851s
+    [junit] 
+    [junit] 
+    [junit] Error: 
+    [junit] Starting ChromeDriver 2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed) on port 13561
+    [junit] Only local connections are allowed.
+    [junit] ¤@¤ë 05, 2017 12:21:22 ¤W¤È org.openqa.selenium.remote.ProtocolHandshake createSession
+    [junit] ¸ê°T: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+    [junit] ¤@¤ë 05, 2017 12:21:23 ¤W¤È org.openqa.selenium.remote.ProtocolHandshake createSession
+    [junit] ¸ê°T: Detected dialect: OSS
+    [junit] Starting ChromeDriver 2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed) on port 2873
+    [junit] Only local connections are allowed.
+    [junit] ¤@¤ë 05, 2017 12:21:31 ¤W¤È org.openqa.selenium.remote.ProtocolHandshake createSession
+    [junit] ¸ê°T: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+    [junit] ¤@¤ë 05, 2017 12:21:33 ¤W¤È org.openqa.selenium.remote.ProtocolHandshake createSession
+    [junit] ¸ê°T: Detected dialect: OSS
+    [junit] Starting ChromeDriver 2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed) on port 31052
+    [junit] Only local connections are allowed.
+    [junit] ¤@¤ë 05, 2017 12:21:47 ¤W¤È org.openqa.selenium.remote.ProtocolHandshake createSession
+    [junit] ¸ê°T: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+    [junit] ¤@¤ë 05, 2017 12:21:48 ¤W¤È org.openqa.selenium.remote.ProtocolHandshake createSession
+    [junit] ¸ê°T: Detected dialect: OSS
+    [junit] Starting ChromeDriver 2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed) on port 43607
+    [junit] Only local connections are allowed.
+    [junit] ¤@¤ë 05, 2017 12:22:05 ¤W¤È org.openqa.selenium.remote.ProtocolHandshake createSession
+    [junit] ¸ê°T: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+    [junit] ¤@¤ë 05, 2017 12:22:07 ¤W¤È org.openqa.selenium.remote.ProtocolHandshake createSession
+    [junit] ¸ê°T: Detected dialect: OSS
+    [junit] Starting ChromeDriver 2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed) on port 20520
+    [junit] Only local connections are allowed.
+    [junit] ¤@¤ë 05, 2017 12:22:11 ¤W¤È org.openqa.selenium.remote.ProtocolHandshake createSession
+    [junit] ¸ê°T: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+    [junit] ¤@¤ë 05, 2017 12:22:13 ¤W¤È org.openqa.selenium.remote.ProtocolHandshake createSession
+    [junit] ¸ê°T: Detected dialect: OSS
+    [junit] 
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSGjNKU4P0+vJLE4u1gvPjGvRM8xr8S/tCQ5PzfVL78ktUuDM0uMry+HiYGhoohBCqo8OT+vOD8nVc8ZQoMUMkAAI0hhAQAUXUdTXgAAAA==[0mBUILD SUCCESSFUL
+Total time: 1 minute 1 second
+[CucumberReport] Preparing Cucumber Reports
+[CucumberReport] Copied 1 json files from workspace "C:\Program Files (x86)\Jenkins\workspace\ALSD2016_Test" to reports directory "C:\Program Files (x86)\Jenkins\jobs\ALSD2016_Test\builds\60\cucumber-html-reports\.cache"
+[CucumberReport] Filtered out 1 json files:
+[CucumberReport] C:\Program Files (x86)\Jenkins\jobs\ALSD2016_Test\builds\60\cucumber-html-reports\.cache\target\cucumber.json
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Ä²µo [8mha:AAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZB/az8JH2P/NzUgNKknMziDH0AmhwAwMYAAAA=[0mHomePublish ªº·s«Ø¸m
+Ä²µo [8mha:AAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/az8JH3PvLL8zOTUgNKknMziDH0A5S1irckAAAA=[0mInvoicePublish ªº·s«Ø¸m
+Ä²µo [8mha:AAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyREgYp/az8JH3n1KKSzLTM5MSSzPy8gNKknMziDH0AkX8Uic8AAAA=[0mCertificationPublish ªº·s«Ø¸m
+Ä²µo [8mha:AAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZB/az8JH3fxMycgNKknMziDH0ArVadr8YAAAA=[0mMailPublish ªº·s«Ø¸m
+Finished: SUCCESS

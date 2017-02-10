@@ -1,0 +1,47 @@
+由計時器啟動
+建置中 工作區 C:\Program Files (x86)\Jenkins\workspace\HomePublish_Test
+ > C:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git # timeout=10
+Fetching upstream changes from https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision fee8de134c48d076d91e691da10b979726ce0b2c (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f fee8de134c48d076d91e691da10b979726ce0b2c
+ > C:\Program Files\Git\bin\git.exe rev-list fee8de134c48d076d91e691da10b979726ce0b2c # timeout=10
+[HomePublish_Test] $ cmd /c call C:\WINDOWS\TEMP\hudson6041551480714668999.bat
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish_Test>cd ./home 
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish_Test\home>FOR /F "tokens=*" %i IN ('docker ps -q --filter "ancestor=alsddocker_home_test"') DO docker rm -f %i 
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish_Test\home>docker rm -f f1957dba81ec 
+f1957dba81ec
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish_Test\home>docker rmi alsddocker_home_test 
+Untagged: alsddocker_home_test:latest
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish_Test\home>docker build -t alsddocker_home_test . 
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.45 MB
+Step 1 : FROM google/nodejs
+ ---> d1921e7f8e86
+Step 2 : COPY . /app
+ ---> Using cache
+ ---> b031845decdc
+Step 3 : WORKDIR /app
+ ---> Using cache
+ ---> 8e7a4997a92d
+Step 4 : RUN npm install -g http-server
+ ---> Using cache
+ ---> f12a1c609a53
+Successfully built f12a1c609a53
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish_Test\home>docker run -d -p 9002:8787 alsddocker_home_test  
+9ef4ae902473ce171c7e1c99d84e872ca4a09bf05096a12b3b2b13b72fe6e534
+
+C:\Program Files (x86)\Jenkins\workspace\HomePublish_Test\home>exit 0 
+Finished: SUCCESS

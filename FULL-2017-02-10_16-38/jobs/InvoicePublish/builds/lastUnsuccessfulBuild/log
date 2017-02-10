@@ -1,0 +1,56 @@
+¥Ñ¨Ï¥ÎªÌ [8mha:AAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyOEgY+/dLi1CL9xJziFCMDQzMAuYhVxcMAAAA=[0malsd2016 ±Ò°Ê
+«Ø¸m¤¤ ¤u§@°Ï C:\Program Files (x86)\Jenkins\workspace\InvoicePublish
+ > C:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git # timeout=10
+Fetching upstream changes from https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/ALSD2016-Team/ALSD2016-FrontEnd.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision c5e667a0845bd85ada281e1254a5dfeb45e2f1da (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f c5e667a0845bd85ada281e1254a5dfeb45e2f1da
+ > C:\Program Files\Git\bin\git.exe rev-list c5e667a0845bd85ada281e1254a5dfeb45e2f1da # timeout=10
+[InvoicePublish] $ cmd /c call C:\WINDOWS\TEMP\hudson6295221912861966221.bat
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish>cd ./invoice 
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish\invoice>FOR /F "tokens=*" %i IN ('docker ps -q --filter "ancestor=alsddocker_invoice"') DO docker rm -f %i 
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish\invoice>docker rm -f b69897a4085f 
+b69897a4085f
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish\invoice>docker rmi disk9562/invoicepublish 
+Untagged: disk9562/invoicepublish:latest
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish\invoice>docker build -t disk9562/invoicepublish . 
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.49 MB
+Step 1 : FROM google/nodejs
+ ---> d1921e7f8e86
+Step 2 : COPY . /app
+ ---> Using cache
+ ---> b49105eba868
+Step 3 : WORKDIR /app
+ ---> Using cache
+ ---> 35d966bb9982
+Step 4 : RUN npm install -g http-server
+ ---> Using cache
+ ---> b8b8ca82ea83
+Successfully built b8b8ca82ea83
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish\invoice>docker login -e disc9562@gmail.com -u disc9562 -p jay828486 https://index.docker.io/v1/  
+Flag --email has been deprecated, will be removed in 1.13.
+Login Succeeded
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish\invoice>docker run -d -p 9091:9091 disk9562/invoicepublish  
+a0de2aeeb485c550657b378bb3e10c0a5809047b32602b59b416bfe7bd9ce61b
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish\invoice>docker push disc9562/invoicepublish 
+The push refers to a repository [docker.io/disc9562/invoicepublish]
+An image does not exist locally with the tag: disc9562/invoicepublish
+
+C:\Program Files (x86)\Jenkins\workspace\InvoicePublish\invoice>exit 1 
+Build step '°õ¦æ Windows §å¦¸«ü¥O' marked build as failure
+Finished: FAILURE

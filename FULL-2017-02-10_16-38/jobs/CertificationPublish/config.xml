@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.0.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/ALSD2016-Team/2016NTUTALSD.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <jenkins.triggers.ReverseBuildTrigger>
+      <spec></spec>
+      <upstreamProjects>ALSD2016_Test</upstreamProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </jenkins.triggers.ReverseBuildTrigger>
+    <hudson.triggers.TimerTrigger>
+      <spec>H 3 * * *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Ant plugin="ant@1.4">
+      <targets>build-war</targets>
+      <antName>default</antName>
+      <buildFile>sendMail</buildFile>
+    </hudson.tasks.Ant>
+    <hudson.tasks.Ant plugin="ant@1.4">
+      <targets>build-war</targets>
+      <antName>default</antName>
+      <buildFile>certification</buildFile>
+    </hudson.tasks.Ant>
+    <hudson.tasks.BatchFile>
+      <command>cd ./Certification&#xd;
+FOR /F &quot;tokens=*&quot; %%i IN (&apos;docker ps -q --filter &quot;ancestor=disc9562/alsddocker_certification&quot;&apos;) DO docker rm -f %%i&#xd;
+docker rmi disc9562/alsddocker_certification&#xd;
+docker build -t disc9562/alsddocker_certification .&#xd;
+docker run -d -p 9090:8080 disc9562/alsddocker_certification&#xd;
+docker login -e disc9562@gmail.com -u disc9562 -p jay828486 https://index.docker.io/v1/ &#xd;
+docker push disc9562/alsddocker_certification</command>
+    </hudson.tasks.BatchFile>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

@@ -1,0 +1,125 @@
+¥Ñ¤W¶Ç±M®× "[8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH1Hn2AXIwNDs/iQ1OISfQB/zA0oyAAAAA==[0mALSD2016_Test" ªº²Ä [8mha:AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JH1Hn2AXIwNDs/iQ1OISfTMDABZFw0TKAAAA[0m60 ¦¸«Ø¸m±Ò°Ê
+­ì¦]¬°:
+ ¥Ñ¨Ï¥ÎªÌ [8mha:AAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyOEgY+/dLi1CL9xJziFCMDQzMAuYhVxcMAAAA=[0malsd2016 ±Ò°Ê
+«Ø¸m¤¤ ¤u§@°Ï C:\Program Files (x86)\Jenkins\workspace\CertificationPublish
+ > C:\Program Files\Git\bin\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/ALSD2016-Team/2016NTUTALSD.git # timeout=10
+Fetching upstream changes from https://github.com/ALSD2016-Team/2016NTUTALSD.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > C:\Program Files\Git\bin\git.exe fetch --tags --progress https://github.com/ALSD2016-Team/2016NTUTALSD.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision e2e74f3ce9898c7595a29b789050f9940227349b (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f e2e74f3ce9898c7595a29b789050f9940227349b
+ > C:\Program Files\Git\bin\git.exe rev-list e2e74f3ce9898c7595a29b789050f9940227349b # timeout=10
+[CertificationPublish] $ cmd.exe /C '""C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Ant_AntInstallation\default\bin\ant.bat"' -file sendMail build-war && exit %%ERRORLEVEL%%"
+Buildfile: C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\sendMail\build.xml
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mclean:
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mprepare:
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mcompile:
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mbuild-war:
+      [war] Building war: C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\sendMail\build\war\sendMail.war
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSGjNKU4P0+vJLE4u1gvPjGvRM8xr8S/tCQ5PzfVL78ktUuDM0uMry+HiYGhoohBCqo8OT+vOD8nVc8ZQoMUMkAAI0hhAQAUXUdTXgAAAA==[0mBUILD SUCCESSFUL
+Total time: 13 seconds
+[CertificationPublish] $ cmd.exe /C '""C:\Program Files (x86)\Jenkins\tools\hudson.tasks.Ant_AntInstallation\default\bin\ant.bat"' -file certification build-war && exit %%ERRORLEVEL%%"
+Buildfile: C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\certification\build.xml
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mclean:
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mprepare:
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mcompile:
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mbuild-war:
+      [war] Building war: C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\certification\build\war\Certification.war
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSGjNKU4P0+vJLE4u1gvPjGvRM8xr8S/tCQ5PzfVL78ktUuDM0uMry+HiYGhoohBCqo8OT+vOD8nVc8ZQoMUMkAAI0hhAQAUXUdTXgAAAA==[0mBUILD SUCCESSFUL
+Total time: 6 seconds
+[CertificationPublish] $ cmd /c call C:\WINDOWS\TEMP\hudson7211795330977623086.bat
+
+C:\Program Files (x86)\Jenkins\workspace\CertificationPublish>cd ./Certification 
+
+C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\Certification>FOR /F "tokens=*" %i IN ('docker ps -q --filter "ancestor=disc9562/alsddocker_certification"') DO docker rm -f %i 
+
+C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\Certification>docker rm -f c937570c73ba 
+c937570c73ba
+
+C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\Certification>docker rmi disc9562/alsddocker_certification 
+Untagged: disc9562/alsddocker_certification:latest
+Untagged: disc9562/alsddocker_certification@sha256:8da69915e024bc3c6b7eeabc2cdfb5fe4a6adbcd309d97096f8a80e09845b39a
+Deleted: sha256:4e37271993257f88a1a8a881c8a36e1c22f8deaf4017a01cbff2d9b74c19594e
+Deleted: sha256:dd9eaac01fc6a2a9e5d627e375d570ef2b01bc5de532604bc459a07b5a2010be
+Deleted: sha256:df5900ba5e76b97c895c0cc7d552e8abf871adf8a23805aaf07fdf84740b6d4f
+
+C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\Certification>docker build -t disc9562/alsddocker_certification . 
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon 62.95 MBSending build context to Docker daemon  63.5 MBSending build context to Docker daemon 64.06 MBSending build context to Docker daemon 64.62 MBSending build context to Docker daemon 65.18 MBSending build context to Docker daemon 65.73 MBSending build context to Docker daemon 66.29 MBSending build context to Docker daemon 66.85 MBSending build context to Docker daemon  67.4 MBSending build context to Docker daemon 67.96 MBSending build context to Docker daemon 68.52 MBSending build context to Docker daemon 69.07 MBSending build context to Docker daemon 69.63 MBSending build context to Docker daemon 70.19 MBSending build context to Docker daemon 70.75 MBSending build context to Docker daemon  71.3 MBSending build context to Docker daemon 71.86 MBSending build context to Docker daemon 72.42 MBSending build context to Docker daemon 72.97 MBSending build context to Docker daemon 73.53 MBSending build context to Docker daemon 74.09 MBSending build context to Docker daemon 74.65 MBSending build context to Docker daemon  75.2 MBSending build context to Docker daemon 75.76 MBSending build context to Docker daemon 76.32 MBSending build context to Docker daemon 76.87 MBSending build context to Docker daemon 77.43 MBSending build context to Docker daemon 77.99 MBSending build context to Docker daemon 78.54 MBSending build context to Docker daemon  79.1 MBSending build context to Docker daemon 79.66 MBSending build context to Docker daemon 80.22 MBSending build context to Docker daemon 80.77 MBSending build context to Docker daemon 81.33 MBSending build context to Docker daemon 81.89 MBSending build context to Docker daemon 82.44 MBSending build context to Docker daemon    83 MBSending build context to Docker daemon 83.56 MBSending build context to Docker daemon 84.12 MBSending build context to Docker daemon 84.67 MBSending build context to Docker daemon 85.23 MBSending build context to Docker daemon 85.79 MBSending build context to Docker daemon 86.34 MBSending build context to Docker daemon  86.9 MBSending build context to Docker daemon 87.46 MBSending build context to Docker daemon 88.01 MBSending build context to Docker daemon 88.57 MBSending build context to Docker daemon 89.13 MBSending build context to Docker daemon 89.69 MBSending build context to Docker daemon 90.24 MBSending build context to Docker daemon  90.8 MBSending build context to Docker daemon 91.36 MBSending build context to Docker daemon 91.91 MBSending build context to Docker daemon 92.47 MBSending build context to Docker daemon 93.03 MBSending build context to Docker daemon 93.59 MBSending build context to Docker daemon 94.14 MBSending build context to Docker daemon  94.7 MBSending build context to Docker daemon 95.26 MBSending build context to Docker daemon 95.81 MBSending build context to Docker daemon 96.37 MBSending build context to Docker daemon 96.93 MBSending build context to Docker daemon 97.05 MB
+Step 1 : FROM tomcat:8.5.9-jre8
+ ---> d327b448d5b8
+Step 2 : COPY /build/war/Certification.war /usr/local/tomcat/webapps/
+ ---> f27502195935
+Removing intermediate container 4ef1cd30c7e0
+Step 3 : WORKDIR /usr/local/tomcat/webapps/
+ ---> Running in d8cbb27e54f0
+ ---> c745fd5dea5d
+Removing intermediate container d8cbb27e54f0
+Successfully built c745fd5dea5d
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+
+C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\Certification>docker run -d -p 9090:8080 disc9562/alsddocker_certification 
+6e73df1d62020258fd95e7edd2d9bc1bf4c0e7dc92aaf833492829e4ce761b5e
+
+C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\Certification>docker login -e disc9562@gmail.com -u disc9562 -p jay828486 https://index.docker.io/v1/  
+Flag --email has been deprecated, will be removed in 1.13.
+Login Succeeded
+
+C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\Certification>docker push disc9562/alsddocker_certification 
+The push refers to a repository [docker.io/disc9562/alsddocker_certification]
+5ce6e7a024d9: Preparing
+1ab81ccddcb0: Preparing
+100362960951: Preparing
+cdf4f170cc79: Preparing
+731c2c63afc5: Preparing
+1dbba483d13c: Preparing
+24b3cd18a168: Preparing
+ef5e2850ccfe: Preparing
+fbfa3c9a96db: Preparing
+c01141679a41: Preparing
+8a8d2d3a56ef: Preparing
+9e9ecb074181: Preparing
+60a0858edcd5: Preparing
+b6ca02dfe5e6: Preparing
+731c2c63afc5: Waiting
+1dbba483d13c: Waiting
+24b3cd18a168: Waiting
+ef5e2850ccfe: Waiting
+fbfa3c9a96db: Waiting
+c01141679a41: Waiting
+8a8d2d3a56ef: Waiting
+9e9ecb074181: Waiting
+60a0858edcd5: Waiting
+b6ca02dfe5e6: Waiting
+100362960951: Layer already exists
+1ab81ccddcb0: Layer already exists
+cdf4f170cc79: Layer already exists
+1dbba483d13c: Layer already exists
+731c2c63afc5: Layer already exists
+24b3cd18a168: Layer already exists
+ef5e2850ccfe: Layer already exists
+fbfa3c9a96db: Layer already exists
+c01141679a41: Layer already exists
+8a8d2d3a56ef: Layer already exists
+60a0858edcd5: Layer already exists
+9e9ecb074181: Layer already exists
+b6ca02dfe5e6: Layer already exists
+unauthorized: authentication required
+
+C:\Program Files (x86)\Jenkins\workspace\CertificationPublish\Certification>exit 1 
+Build step '°õ¦æ Windows §å¦¸«ü¥O' marked build as failure
+Finished: FAILURE

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.0.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/ALSD2016-Team/2016NTUTALSD.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.25.0">
+      <spec></spec>
+    </com.cloudbees.jenkins.GitHubPushTrigger>
+    <hudson.triggers.TimerTrigger>
+      <spec>H 3 * * *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Ant plugin="ant@1.4">
+      <targets>build-war</targets>
+      <antName>default</antName>
+      <buildFile>sendMail</buildFile>
+    </hudson.tasks.Ant>
+    <hudson.tasks.Ant plugin="ant@1.4">
+      <targets>build-war</targets>
+      <antName>default</antName>
+      <buildFile>certification</buildFile>
+    </hudson.tasks.Ant>
+    <hudson.tasks.BatchFile>
+      <command>cd ./Certification&#xd;
+FOR /F &quot;tokens=*&quot; %%i IN (&apos;docker ps -q --filter &quot;ancestor=alsddocker_certification_test&quot;&apos;) DO docker rm -f %%i&#xd;
+docker rmi alsddocker_certification_test&#xd;
+docker build -t alsddocker_certification_test .&#xd;
+docker run -d -p 9000:8080 alsddocker_certification_test </command>
+    </hudson.tasks.BatchFile>
+  </builders>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>ALSD2016_Test</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
+  <buildWrappers/>
+</project>

@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>alsd2016</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.plugins.git.util.BuildData plugin="git@3.0.1">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/testJenkins</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@2.1.0">
+              <sha1>4c96140dc8823172a67652f9575b2e1609c817c5</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/testJenkins</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@2.1.0">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>55</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@2.1.0">
+              <sha1>04d7c6df129e6d0b069e2a134a3c8e8baf80ce20</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>60</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry[2]/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
+      <remoteUrls>
+        <string>https://github.com/ALSD2016-Team/alsd2016_test.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@3.0.1">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>C:\Program Files (x86)\Jenkins\workspace\ALSD2016_Test</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <net.masterthought.jenkins.SafeArchiveServingRunAction plugin="cucumber-reports@3.3.0">
+      <fileChecksums>
+        <entry>
+          <string>css/bootstrap.min.css</string>
+          <string>f8ed054833c64aba3c98a2b47d28d8875dea9345</string>
+        </entry>
+        <entry>
+          <string>css/font-awesome.min.css</string>
+          <string>546e17bad09ff6ef66d22c46b07151e5a647c6bb</string>
+        </entry>
+        <entry>
+          <string>js/Chart.min.js</string>
+          <string>bdd30be85ae50500bf1e4485c5dc62beb83b8651</string>
+        </entry>
+        <entry>
+          <string>fonts/fontawesome-webfont.woff</string>
+          <string>02866b1bc5eced0f39c98774d7dc43f55e3f96e4</string>
+        </entry>
+        <entry>
+          <string>overview-tags.html</string>
+          <string>46dd65ad01bd72dfea13b6e7997362def62f9088</string>
+        </entry>
+        <entry>
+          <string>overview-trends.html</string>
+          <string>6f6d7f4ac988836d703fbf57cb6ca5493efe7af8</string>
+        </entry>
+        <entry>
+          <string>css/cucumber.css</string>
+          <string>a7de9690e304d40cd9de16e7e4a892b59ef1c230</string>
+        </entry>
+        <entry>
+          <string>js/jquery.tablesorter.min.js</string>
+          <string>2503fbdd2373b0fd919964f05d7c1cd21c0eea7e</string>
+        </entry>
+        <entry>
+          <string>overview-features.html</string>
+          <string>d221eaebb4784f20a302b14bd9b6b7c9ff40dc1b</string>
+        </entry>
+        <entry>
+          <string>fonts/FontAwesome.otf</string>
+          <string>4fd648f4b5160f2ccff6cb7dcc4369b65c46b41c</string>
+        </entry>
+        <entry>
+          <string>overview-steps.html</string>
+          <string>b27ee105f5df4fafd6b6fc822cf58bac41001a37</string>
+        </entry>
+        <entry>
+          <string>fonts/fontawesome-webfont.svg</string>
+          <string>df25a11e42696ec219f33fe919399d83d64dfad4</string>
+        </entry>
+        <entry>
+          <string>images/favicon.png</string>
+          <string>c809dc60a310c87582db67dbff1fcb3168c7c0d0</string>
+        </entry>
+        <entry>
+          <string>fonts/fontawesome-webfont.ttf</string>
+          <string>b1c6596882a1c6510cf93630ea4cb5473f6afd46</string>
+        </entry>
+        <entry>
+          <string>js/bootstrap.min.js</string>
+          <string>d20d2446b4ce5aa434547e0e565f00253e067960</string>
+        </entry>
+        <entry>
+          <string>report-feature_resources-sendMail-feature.html</string>
+          <string>6c024570ae83f46e1f357a440de50008639ee958</string>
+        </entry>
+        <entry>
+          <string>fonts/glyphicons-halflings-regular.svg</string>
+          <string>c9607944ac6b2525dca50a2d511f506d21eb02c3</string>
+        </entry>
+        <entry>
+          <string>fonts/glyphicons-halflings-regular.woff</string>
+          <string>63617ff0a2dea4977236ccd33493bf9c8f085a03</string>
+        </entry>
+        <entry>
+          <string>fonts/glyphicons-halflings-regular.ttf</string>
+          <string>976965ed10a66b50ca0144cca10f415a8633c24d</string>
+        </entry>
+        <entry>
+          <string>overview-failures.html</string>
+          <string>9d34652d5cdf3619a81a013b63f9c41f07b0e482</string>
+        </entry>
+        <entry>
+          <string>fonts/glyphicons-halflings-regular.eot</string>
+          <string>34eab648e8a796f38d21d47d3c391ab7774f1b76</string>
+        </entry>
+        <entry>
+          <string>fonts/fontawesome-webfont.woff2</string>
+          <string>2dfb067eec1c9bba197704dc2491c4f9d3f3f160</string>
+        </entry>
+        <entry>
+          <string>js/jquery.min.js</string>
+          <string>04ef67c7f93c46186312b0e18658e2a3f3ac3b34</string>
+        </entry>
+        <entry>
+          <string>fonts/fontawesome-webfont.eot</string>
+          <string>15eb795edb714659a5915eaacc9eaf8837401d5e</string>
+        </entry>
+        <entry>
+          <string>fonts/glyphicons-halflings-regular.woff2</string>
+          <string>1721e2c77c5304d6ab9a14e22ea045dff832f746</string>
+        </entry>
+        <entry>
+          <string>.cache/target/cucumber.json</string>
+          <string>1e81e633f9487c0abdefcb5affc31b4c31a32af2</string>
+        </entry>
+      </fileChecksums>
+      <rootDir>C:\Program Files (x86)\Jenkins\jobs\ALSD2016_Test\builds\60\cucumber-html-reports</rootDir>
+      <urlName>cucumber-html-reports</urlName>
+      <indexFile>overview-features.html</indexFile>
+      <iconName>/plugin/cucumber-reports/icon.png</iconName>
+      <title>Cucumber reports</title>
+      <safeExtensions class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+        <c class="java.util.Arrays$ArrayList">
+          <a class="string-array"/>
+        </c>
+        <list class="java.util.Arrays$ArrayList" reference="../c"/>
+      </safeExtensions>
+    </net.masterthought.jenkins.SafeArchiveServingRunAction>
+  </actions>
+  <queueId>67</queueId>
+  <timestamp>1483546859614</timestamp>
+  <startTime>1483546859619</startTime>
+  <result>SUCCESS</result>
+  <duration>82217</duration>
+  <charset>x-windows-950</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>C:\Program Files (x86)\Jenkins\workspace\ALSD2016_Test</workspace>
+  <hudsonVersion>2.19.4</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@3.0.1">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <culprits class="com.google.common.collect.RegularImmutableSortedSet">
+    <string>noreply</string>
+    <string>wayne265265</string>
+  </culprits>
+</build>

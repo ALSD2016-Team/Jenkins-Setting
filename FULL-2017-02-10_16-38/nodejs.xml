@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.plugins.nodejs.NodeJSPlugin plugin="nodejs@0.2.2">
+  <installations>
+    <jenkins.plugins.nodejs.tools.NodeJSInstallation>
+      <name>default</name>
+      <home>C:\Program Files\nodejs</home>
+      <properties/>
+      <nodeJSHome>C:\Program Files\nodejs</nodeJSHome>
+    </jenkins.plugins.nodejs.tools.NodeJSInstallation>
+  </installations>
+</jenkins.plugins.nodejs.NodeJSPlugin>
